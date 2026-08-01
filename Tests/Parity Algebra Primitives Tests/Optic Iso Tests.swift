@@ -8,6 +8,8 @@ import Testing
 @Suite
 struct `Optic Iso Tests` {
     @Suite struct Unit {}
+    @Suite struct `Edge Case` {}
+    @Suite struct Integration {}
 }
 
 // MARK: - Unit
