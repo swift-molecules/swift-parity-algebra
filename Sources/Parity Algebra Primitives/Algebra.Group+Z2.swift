@@ -1,16 +1,9 @@
-// Algebra.Group+Z2.swift
-
 public import Algebra_Group_Primitives
 public import Optic_Primitives
 public import Parity_Primitives
 
-/// Transports the canonical Z₂ group (Parity) across an isomorphism.
-///
-/// Given an isomorphism between Element and Parity, constructs a Z₂ group
-/// on Element by mapping through the isomorphism. The identity is the
-/// element corresponding to `.even`, and every element is self-inverse.
 extension Algebra.Group {
-    /// The additive Z₂ group on `Element`, transported from the canonical `Parity` group across `iso`.
+
     @inlinable
     public static func z2(via iso: Optic.Iso<Element, Parity>) -> Self {
         .init(

@@ -1,18 +1,9 @@
-// Algebra.Field+Z2.swift
-
 public import Algebra_Field_Primitives
 public import Optic_Primitives
 public import Parity_Primitives
 
-/// Transports the canonical Z₂ field (Parity) across an isomorphism.
-///
-/// The transported field has:
-/// - Additive group: transported via `Group.z2(via:)`
-/// - Multiplicative monoid: transported AND operation
-/// - Reciprocal: maps through iso, the one element is its own inverse,
-///   the zero element throws `.nonInvertible`
 extension Algebra.Field {
-    /// The Z₂ field on `Element`, transported from the canonical `Parity` field across `iso`.
+
     @inlinable
     public static func z2(via iso: Optic.Iso<Element, Parity>) -> Self {
         return .init(

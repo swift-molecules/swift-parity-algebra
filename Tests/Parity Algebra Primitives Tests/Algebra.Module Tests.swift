@@ -3,12 +3,6 @@ import Parity_Algebra_Primitives
 import Parity_Primitives
 import Testing
 
-// [TEST-004] Generic type uses parallel namespace pattern.
-//
-// `Algebra.Module<Scalars, Vectors>` is an unspecialized generic type, so the
-// extension-pattern nested suite hard-errors with `@section cannot be used in
-// a generic context`; this uses the top-level backticked-name fallback.
-
 @Suite
 struct `Algebra.Module Tests` {
     @Suite struct Unit {}
@@ -16,12 +10,8 @@ struct `Algebra.Module Tests` {
     @Suite struct Integration {}
 }
 
-// MARK: - Test Fixtures
-
 extension `Algebra.Module Tests` {
-    /// Parity field as scalars, Parity group as vectors.
-    ///
-    /// Scalar multiplication is Parity.multiplying.
+
     fileprivate static var parityModule: Algebra.Module<Parity, Parity> {
         let ring = Algebra.Ring<Parity>(
             additive: .init(
@@ -64,8 +54,6 @@ extension `Algebra.Module Tests` {
         )
     }
 }
-
-// MARK: - Unit
 
 extension `Algebra.Module Tests`.Unit {
     @Test

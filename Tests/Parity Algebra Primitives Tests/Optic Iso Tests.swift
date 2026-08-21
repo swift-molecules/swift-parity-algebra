@@ -1,9 +1,5 @@
-// Optic Iso Tests.swift
-
 import Optic_Primitives
 import Testing
-
-// Smoke coverage for the Optic.Iso transport that the z2-via-iso witnesses rely on.
 
 @Suite
 struct `Optic Iso Tests` {
@@ -11,8 +7,6 @@ struct `Optic Iso Tests` {
     @Suite struct `Edge Case` {}
     @Suite struct Integration {}
 }
-
-// MARK: - Unit
 
 extension `Optic Iso Tests`.Unit {
 
