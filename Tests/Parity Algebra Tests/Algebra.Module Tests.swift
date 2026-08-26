@@ -1,6 +1,6 @@
-import Algebra_Module_Primitives
-import Parity_Algebra_Primitives
-import Parity_Primitives
+import Algebra_Module
+import Parity_Algebra
+import Parity
 import Testing
 
 @Suite

@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "swift-parity-algebra-primitives",
+    name: "swift-parity-algebra",
     platforms: [
         .macOS(.v27),
         .iOS(.v27),
@@ -13,51 +13,51 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Parity Algebra Primitives",
-            targets: ["Parity Algebra Primitives"]
+            name: "Parity Algebra",
+            targets: ["Parity Algebra"]
         ),
         .library(
-            name: "Parity Algebra Primitives Test Support",
-            targets: ["Parity Algebra Primitives Test Support"]
+            name: "Parity Algebra Test Support",
+            targets: ["Parity Algebra Test Support"]
         ),
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-primitives/swift-parity-primitives.git",
+            url: "https://github.com/swift-molecules/swift-parity.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-algebra-primitives.git",
+            url: "https://github.com/swift-molecules/swift-algebra.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-primitives/swift-optic-primitives.git",
+            url: "https://github.com/swift-molecules/swift-optic.git",
             branch: "main"
         ),
     ],
     targets: [
         .target(
-            name: "Parity Algebra Primitives",
+            name: "Parity Algebra",
             dependencies: [
-                .product(name: "Parity Primitives", package: "swift-parity-primitives"),
-                .product(name: "Algebra Group Primitives", package: "swift-algebra-primitives"),
-                .product(name: "Algebra Field Primitives", package: "swift-algebra-primitives"),
-                .product(name: "Optic Primitives", package: "swift-optic-primitives"),
+                .product(name: "Parity", package: "swift-parity"),
+                .product(name: "Algebra Group", package: "swift-algebra"),
+                .product(name: "Algebra Field", package: "swift-algebra"),
+                .product(name: "Optic", package: "swift-optic"),
             ]
         ),
         .target(
-            name: "Parity Algebra Primitives Test Support",
+            name: "Parity Algebra Test Support",
             dependencies: [
-                "Parity Algebra Primitives"
+                "Parity Algebra"
             ],
             path: "Tests/Support"
         ),
         .testTarget(
-            name: "Parity Algebra Primitives Tests",
+            name: "Parity Algebra Tests",
             dependencies: [
-                "Parity Algebra Primitives",
-                "Parity Algebra Primitives Test Support",
-                .product(name: "Algebra Module Primitives", package: "swift-algebra-primitives"),
+                "Parity Algebra",
+                "Parity Algebra Test Support",
+                .product(name: "Algebra Module", package: "swift-algebra"),
             ]
         ),
     ],

@@ -1,6 +1,6 @@
-public import Algebra_Group_Primitives
-public import Optic_Primitives
-public import Parity_Primitives
+public import Algebra_Group
+public import Optic
+public import Parity
 
 extension Algebra.Group.Abelian {
 

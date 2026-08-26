@@ -1,5 +1,5 @@
-public import Algebra_Field_Primitives
-public import Parity_Primitives
+public import Algebra_Field
+public import Parity
 
 extension Algebra.Field where Element == Parity {
 

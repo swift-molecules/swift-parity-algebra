@@ -1,6 +1,6 @@
-public import Algebra_Field_Primitives
-public import Optic_Primitives
-public import Parity_Primitives
+public import Algebra_Field
+public import Optic
+public import Parity
 
 extension Algebra.Field {
 
