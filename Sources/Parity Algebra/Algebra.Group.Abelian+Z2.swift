@@ -1,4 +1,4 @@
-public import Algebra_Group
+public import Algebra
 public import Optic
 public import Parity
 

@@ -60,13 +60,13 @@ dependencies: [
 )
 ```
 
-Requires Swift 6.3.1 and macOS 26 / iOS 26 / tvOS 26 / watchOS 26 / visionOS 26 (or the matching Linux / Windows toolchain).
+Requires Swift 6.4 and macOS 27 / iOS 27 / tvOS 27 / watchOS 27 / visionOS 27 (or the matching Linux / Windows toolchain).
 
 ---
 
 ## Architecture
 
-Two library products. Builds on `Parity` (parity-primitives), the `Algebra.Group` / `Algebra.Field` witnesses (algebra-primitives), and `Optic.Iso` (optic-primitives), and re-exports all four so a single import suffices.
+Two library products. Builds on the canonical `Parity`, `Algebra`, and `Optic` atoms, and re-exports them so a single import suffices.
 
 | Product | Target | Purpose |
 |---------|--------|---------|
@@ -81,7 +81,7 @@ Foundation-free.
 
 | Platform | Status |
 |----------|--------|
-| macOS 26 | Full support |
+| macOS 27 | Full support |
 | Linux | Full support |
 | Windows | Full support |
 | iOS / tvOS / watchOS / visionOS | Supported |

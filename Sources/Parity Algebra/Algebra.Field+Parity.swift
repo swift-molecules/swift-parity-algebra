@@ -1,4 +1,4 @@
-public import Algebra_Field
+public import Algebra
 public import Parity
 
 extension Algebra.Field where Element == Parity {

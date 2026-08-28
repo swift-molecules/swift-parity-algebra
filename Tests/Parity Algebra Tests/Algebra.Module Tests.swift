@@ -1,4 +1,4 @@
-import Algebra_Module
+import Algebra
 import Parity_Algebra
 import Parity
 import Testing

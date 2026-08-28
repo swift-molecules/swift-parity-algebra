@@ -23,15 +23,15 @@ let package = Package(
     ],
     dependencies: [
         .package(
-            url: "https://github.com/swift-molecules/swift-parity.git",
+            url: "https://github.com/swift-atoms/swift-parity.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-algebra.git",
+            url: "https://github.com/swift-atoms/swift-algebra.git",
             branch: "main"
         ),
         .package(
-            url: "https://github.com/swift-molecules/swift-optic.git",
+            url: "https://github.com/swift-atoms/swift-optic.git",
             branch: "main"
         ),
     ],
@@ -40,8 +40,7 @@ let package = Package(
             name: "Parity Algebra",
             dependencies: [
                 .product(name: "Parity", package: "swift-parity"),
-                .product(name: "Algebra Group", package: "swift-algebra"),
-                .product(name: "Algebra Field", package: "swift-algebra"),
+                .product(name: "Algebra", package: "swift-algebra"),
                 .product(name: "Optic", package: "swift-optic"),
             ]
         ),
@@ -57,7 +56,7 @@ let package = Package(
             dependencies: [
                 "Parity Algebra",
                 "Parity Algebra Test Support",
-                .product(name: "Algebra Module", package: "swift-algebra"),
+                .product(name: "Algebra", package: "swift-algebra"),
             ]
         ),
     ],
